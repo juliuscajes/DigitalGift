@@ -3,7 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Christmas Gifts 2025</title>
+    <meta
+      name="description"
+      content="Heartfelt Christmas and New Year wishes with cherished family memories. Celebrating the holiday season 2025-2026 with love, joy, and gratitude."
+    />
+    <meta
+      name="keywords"
+      content="Christmas, New Year, Family, Memories, Holiday Greetings, 2025, 2026"
+    />
+    <meta name="author" content="Julius C. Lagarto" />
+    <meta name="theme-color" content="#1a472a" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Merry Christmas & Happy New Year 2025" />
+    <meta
+      property="og:description"
+      content="Heartfelt holiday wishes and cherished family memories"
+    />
+    <meta property="og:image" content="images/familylove.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Merry Christmas & Happy New Year 2025"
+    />
+    <meta
+      name="twitter:description"
+      content="Heartfelt holiday wishes and cherished family memories"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎄</text></svg>"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎄</text></svg>"
+    />
+
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json" />
+
+    <title>Merry Christmas & Happy New Year 2025 | Family Celebration</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Christmas & New Year 2025 Family Celebration",
+        "description": "Heartfelt Christmas and New Year wishes with cherished family memories",
+        "author": {
+          "@type": "Person",
+          "name": "Julius C. Lagarto"
+        },
+        "datePublished": "2025-12-25",
+        "inLanguage": "en"
+      }
+    </script>
+
     <style>
       * {
         margin: 0;
@@ -377,55 +442,90 @@
     </style>
   </head>
   <body>
-    <header>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
       <h1>🎄Merry Christmas & Happy New Year 🎄</h1>
       <p class="subtitle">Heartfelt wishes for the holidays</p>
     </header>
 
-    <div class="container">
+    <main id="main-content" class="container" role="main">
       <div class="gift-grid">
-        <div
+        <article
           class="gift-card"
           onclick="showModal('Merry Christmas', 'MERRY CHRISTMAS to my Family! May this festive season bring us joy, love, and countless blessings. I am truly grateful for everyone and the happiness bring into our life.  -----From Kuya: Julius C. Lagarto')"
+          role="button"
+          tabindex="0"
+          aria-label="Open Merry Christmas greeting"
         >
-          <div class="gift-icon">🎅</div>
+          <div class="gift-icon" aria-hidden="true">🎅</div>
           <h3>Merry Christmas</h3>
           <p>
             Warm wishes for a joyful and blessed Christmas grateful-message.
           </p>
-          <button class="btn">Open</button>
-        </div>
+          <button class="btn" aria-label="Open Christmas message">Open</button>
+        </article>
 
-        <div
+        <article
           class="gift-card"
           onclick="showModal('Happy New Year', 'HAPPY NEW YEAR! Wishing us a year filled with new hopes, exciting opportunities, and endless happiness. May 2026 be a year of prosperity and success for all of us.     -----From Kuya: Julius C. Lagarto')"
+          role="button"
+          tabindex="0"
+          aria-label="Open Happy New Year greeting"
         >
-          <div class="gift-icon">🎆</div>
+          <div class="gift-icon" aria-hidden="true">🎆</div>
           <h3>Happy New Year</h3>
           <p>Best wishes for a bright and blessed new year ahead.</p>
-          <button class="btn">Open</button>
-        </div>
+          <button class="btn" aria-label="Open New Year message">Open</button>
+        </article>
 
-        <div class="gift-card" onclick="showMemories()">
-          <div class="gift-icon">📸</div>
+        <article
+          class="gift-card"
+          onclick="showMemories()"
+          role="button"
+          tabindex="0"
+          aria-label="View our family memories gallery"
+        >
+          <div class="gift-icon" aria-hidden="true">📸</div>
           <h3>Our Memories</h3>
           <p>Cherished moments and beautiful memories we've shared together.</p>
-          <button class="btn">View Gallery</button>
-        </div>
+          <button class="btn" aria-label="Open memories gallery">
+            View Gallery
+          </button>
+        </article>
       </div>
-    </div>
+    </main>
 
-    <div class="modal" id="modal">
+    <div
+      class="modal"
+      id="modal"
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
       <div class="modal-content">
-        <h2>💌 Greeting!</h2>
+        <h2 id="modal-title">💌 Greeting!</h2>
         <p id="modal-text"></p>
-        <button class="close-btn" onclick="closeModal()">Close</button>
+        <button
+          class="close-btn"
+          onclick="closeModal()"
+          aria-label="Close greeting message"
+        >
+          Close
+        </button>
       </div>
     </div>
 
-    <div class="modal" id="memories-modal">
+    <div
+      class="modal"
+      id="memories-modal"
+      role="dialog"
+      aria-labelledby="memories-title"
+      aria-hidden="true"
+    >
       <div class="modal-content memories-content">
-        <h2>📸 Our Precious Memories</h2>
+        <h2 id="memories-title">📸 Our Precious Memories</h2>
         <div class="grateful-message">
           <p>
             <em
@@ -436,80 +536,117 @@
             >
           </p>
         </div>
-        <div class="photo-gallery">
-          <div class="photo-frame">
-            <img src="images/maximo.jpg" alt="Christmas 2024" />
-            <p>Father</p>
-          </div>
-          <div class="photo-frame">
-            <img src="images/catalina.jpg" alt="Christmas 2024" />
-            <p>Mother</p>
-          </div>
-          <div class="photo-frame">
-            <img src="images/familylove.jpg" alt="Birthday Celebration" />
-            <p>Groupie Picture</p>
-          </div>
-          <div class="photo-frame">
-            <img src="images/complete.jpg" alt="Sunset Together" />
-            <p>Family Picture</p>
-          </div>
-          <div class="photo-frame">
-            <img src="images/4kids.jpg" alt="New Year's Eve" />
-            <p>4 kids in Falls</p>
-          </div>
-
-          <div class="photo-frame">
-            <img src="images/dinner.jpg" alt="Beach Vacation" />
-            <p>Dinner Bonding</p>
-          </div>
-        </div>
+        <section class="photo-gallery" aria-label="Family photo gallery">
+          <figure class="photo-frame">
+            <img src="images/maximo.jpg" alt="Father - Maximo" loading="lazy" />
+            <figcaption>Father</figcaption>
+          </figure>
+          <figure class="photo-frame">
+            <img
+              src="images/catalina.jpg"
+              alt="Mother - Catalina"
+              loading="lazy"
+            />
+            <figcaption>Mother</figcaption>
+          </figure>
+          <figure class="photo-frame">
+            <img
+              src="images/familylove.jpg"
+              alt="Family group picture showing love and togetherness"
+              loading="lazy"
+            />
+            <figcaption>Groupie Picture</figcaption>
+          </figure>
+          <figure class="photo-frame">
+            <img
+              src="images/complete.jpg"
+              alt="Complete family picture"
+              loading="lazy"
+            />
+            <figcaption>Family Picture</figcaption>
+          </figure>
+          <figure class="photo-frame">
+            <img
+              src="images/4kids.jpg"
+              alt="Four kids enjoying at the falls"
+              loading="lazy"
+            />
+            <figcaption>4 kids in Falls</figcaption>
+          </figure>
+          <figure class="photo-frame">
+            <img
+              src="images/dinner.jpg"
+              alt="Family dinner bonding moment"
+              loading="lazy"
+            />
+            <figcaption>Dinner Bonding</figcaption>
+          </figure>
+        </section>
 
         <h3 style="color: #c41e3a; margin-top: 40px; margin-bottom: 20px">
           🎥 Video Memories
         </h3>
-        <div class="video-gallery">
-          <div class="video-frame">
-            <video controls>
+        <section class="video-gallery" aria-label="Family video gallery">
+          <figure class="video-frame">
+            <video
+              controls
+              preload="metadata"
+              aria-label="Travel to Falls video"
+            >
               <source src="videos/travelToFalls.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <p>Travel into Falls</p>
-          </div>
-          <div class="video-frame">
-            <video controls>
+            <figcaption>Travel into Falls</figcaption>
+          </figure>
+          <figure class="video-frame">
+            <video controls preload="metadata" aria-label="Mukbang video">
               <source src="videos/mukbang.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <p>Mukbang</p>
-          </div>
-          <div class="video-frame">
-            <video controls>
+            <figcaption>Mukbang</figcaption>
+          </figure>
+          <figure class="video-frame">
+            <video
+              controls
+              preload="metadata"
+              aria-label="Cabognaw Cave exploration video"
+            >
               <source src="videos/cabognawCave.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <p>Cabognaw Cave</p>
-          </div>
-          <div class="video-frame">
-            <video controls>
+            <figcaption>Cabognaw Cave</figcaption>
+          </figure>
+          <figure class="video-frame">
+            <video
+              controls
+              preload="metadata"
+              aria-label="Family karaoke session video"
+            >
               <source src="videos/karaoke.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <p>Karaoke</p>
-          </div>
-        </div>
-        <div class="upload-note">
+            <figcaption>Karaoke</figcaption>
+          </figure>
+        </section>
+        <aside class="upload-note">
           <p>
             <strong>💝 With Gratitude:</strong> Thank you for being such an
             important part of my life. Your presence makes every moment special,
             and I'm grateful for all the memories we continue to create
             together.
           </p>
-        </div>
-        <button class="close-btn" onclick="closeMemories()">Close</button>
+        </aside>
+        <button
+          class="close-btn"
+          onclick="closeMemories()"
+          aria-label="Close memories gallery"
+        >
+          Close
+        </button>
       </div>
     </div>
 
-    <footer>
+    <footer role="contentinfo">
       <p>🎅 Merry Christmas & Happy Holidays! 🎅</p>
       <p>© 2025-2026 Christmas & New Year. Spreading joy and cheer.</p>
       <p style="margin-top: 15px; font-size: 1em; color: #ffd700">
@@ -520,62 +657,7 @@
       </p>
     </footer>
 
-    <script>
-      // Create snowflakes
-      function createSnowflakes() {
-        const snowflakeCount = 50;
-        for (let i = 0; i < snowflakeCount; i++) {
-          const snowflake = document.createElement("div");
-          snowflake.classList.add("snowflake");
-          snowflake.innerHTML = "❄";
-          snowflake.style.left = Math.random() * 100 + "%";
-          snowflake.style.animationDuration = Math.random() * 3 + 5 + "s";
-          snowflake.style.animationDelay = Math.random() * 5 + "s";
-          snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-          document.body.appendChild(snowflake);
-        }
-      }
-
-      function showModal(greetingName, specialMessage) {
-        const modal = document.getElementById("modal");
-        const modalText = document.getElementById("modal-text");
-        modalText.innerHTML = `<strong>${greetingName}</strong><br><br>${specialMessage}`;
-        modal.style.display = "flex";
-      }
-
-      function closeModal() {
-        const modal = document.getElementById("modal");
-        modal.style.display = "none";
-      }
-
-      function showMemories() {
-        const memoriesModal = document.getElementById("memories-modal");
-        memoriesModal.style.display = "flex";
-      }
-
-      function closeMemories() {
-        const memoriesModal = document.getElementById("memories-modal");
-        memoriesModal.style.display = "none";
-      }
-
-      // Close modal when clicking outside
-      window.onclick = function (event) {
-        const modal = document.getElementById("modal");
-        const memoriesModal = document.getElementById("memories-modal");
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-        if (event.target === memoriesModal) {
-          memoriesModal.style.display = "none";
-        }
-      };
-
-      // Initialize snowflakes
-      createSnowflakes();
-
-      // You can customize the sender name here
-      // Change "Your Name" to your actual name when sharing
-      document.getElementById("sender-name").textContent = "Julius C. Lagarto";
-    </script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
   </body>
 </html>
